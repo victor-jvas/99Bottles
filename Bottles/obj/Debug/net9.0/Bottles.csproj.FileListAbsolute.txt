@@ -97,3 +97,4 @@ C:\Code\Bottles\Bottles\obj\Debug\net9.0\refint\Bottles.dll
 C:\Code\Bottles\Bottles\obj\Debug\net9.0\Bottles.pdb
 C:\Code\Bottles\Bottles\obj\Debug\net9.0\Bottles.genruntimeconfig.cache
 C:\Code\Bottles\Bottles\obj\Debug\net9.0\ref\Bottles.dll
+C:\Code\Bottles\Bottles\obj\Debug\net9.0\Bottles.sourcelink.json
