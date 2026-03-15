@@ -4,6 +4,11 @@ public class BottleNumber(int number)
 {
     private int _number = number;
 
+    public override string ToString()
+    {
+        return $"{Quantity()} {Container()}";
+    }
+
     public string Container()
     {
         if (_number == 1)

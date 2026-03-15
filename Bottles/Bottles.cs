@@ -23,9 +23,10 @@ public class Bottles
     {
         BottleNumber bottleNumber = new(number);
         BottleNumber nextBottleNumber = new(bottleNumber.Successor());
-        return $"{bottleNumber.Quantity().Capitalize()} {bottleNumber.Container()} of beer on the wall, " +
-               $"{bottleNumber.Quantity()} {bottleNumber.Container()} of beer.\n" +
+        
+        return $"{bottleNumber}".Capitalize() + " of beer on the wall, " +
+               $"{bottleNumber} of beer.\n" +
                bottleNumber.Action() +
-               $"{nextBottleNumber.Quantity()} {nextBottleNumber.Container()} of beer on the wall.\n";
+               $"{nextBottleNumber} of beer on the wall.\n";
     }
 }
