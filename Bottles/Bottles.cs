@@ -21,34 +21,11 @@ public class Bottles
     
     public string Verse(int number)
     {
-        return $"{Quantity(number).Capitalize()} {Container(number)} of beer on the wall, " +
-               $"{Quantity(number)} {Container(number)} of beer.\n" +
-               Action(number) +
-               $"{Quantity(Successor(number))} {Container(Successor(number))} of beer on the wall.\n";
-    }
-    
-    public string Container(int number)
-    {
-        return new BottleNumber(number).Container();
-    }
-
-    public string Pronoun(int number)
-    {
-        return new BottleNumber(number).Pronoun();
-    }
-
-    public string Quantity(int number)
-    {
-        return new BottleNumber(number).Quantity();
-    }
-
-    public string Action(int number)
-    {
-        return new BottleNumber(number).Action();
-    }
-
-    public int Successor(int number)
-    {
-        return new BottleNumber(number).Successor();
+        BottleNumber bottleNumber = new(number);
+        BottleNumber nextBottleNumber = new(bottleNumber.Successor());
+        return $"{bottleNumber.Quantity().Capitalize()} {bottleNumber.Container()} of beer on the wall, " +
+               $"{bottleNumber.Quantity()} {bottleNumber.Container()} of beer.\n" +
+               bottleNumber.Action() +
+               $"{nextBottleNumber.Quantity()} {nextBottleNumber.Container()} of beer on the wall.\n";
     }
 }
