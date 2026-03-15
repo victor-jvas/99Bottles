@@ -3,6 +3,16 @@
 public class Bottles
 {
 
+    private static BottleNumber BottleNumberGiven(int number)
+    {
+        return number switch
+        {
+            0 => new BottleNumber0(number),
+            1 => new BottleNumber1(number),
+            _ => new BottleNumber(number)
+        };
+    }
+
     public string Song()
     {
         return Verses(99, 0);
@@ -21,8 +31,8 @@ public class Bottles
     
     public string Verse(int number)
     {
-        BottleNumber bottleNumber = new(number);
-        BottleNumber nextBottleNumber = new(bottleNumber.Successor());
+        BottleNumber bottleNumber = BottleNumberGiven(number);
+        BottleNumber nextBottleNumber = BottleNumberGiven(bottleNumber.Successor());
         
         return $"{bottleNumber}".Capitalize() + " of beer on the wall, " +
                $"{bottleNumber} of beer.\n" +

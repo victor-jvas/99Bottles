@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bottles")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f014dce8d60fd64b226113f61cc711c78a5ea2c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d2a8f113ab613f9c1a46210006e300460003555")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bottles")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bottles")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

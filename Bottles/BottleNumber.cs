@@ -9,7 +9,7 @@ public class BottleNumber(int number)
         return $"{Quantity()} {Container()}";
     }
 
-    public string Container()
+    protected virtual string Container()
     {
         if (_number == 1)
         {
@@ -18,39 +18,23 @@ public class BottleNumber(int number)
         return "bottles";
     }
 
-    public string Pronoun()
+    protected virtual string Pronoun()
     {
-        if (_number == 1)
-        {
-            return "it";
-        }
         return "one";
     }
 
-    public string Quantity()
+    protected virtual string Quantity()
     {
-        if (_number == 0)
-        {
-            return "no more";
-        }
         return _number.ToString();
     }
 
-    public string Action()
+    public virtual string Action()
     {
-        if (_number == 0)
-        {
-            return "Go to the store and buy some more, ";
-        }
         return $"Take {Pronoun()} down and pass it around, ";
     }
 
-    public int Successor()
+    public virtual int Successor()
     {
-        if (_number == 0)
-        {
-            return 99;
-        }
         return _number-1;
     }
 }
