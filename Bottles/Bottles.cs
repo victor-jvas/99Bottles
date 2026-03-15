@@ -2,6 +2,7 @@
 
 public class Bottles
 {
+
     public string Song()
     {
         return Verses(99, 0);
@@ -25,50 +26,29 @@ public class Bottles
                Action(number) +
                $"{Quantity(Successor(number))} {Container(Successor(number))} of beer on the wall.\n";
     }
-
-    private string Container(int number)
-    {
-        if (number == 1)
-        {
-            return "bottle";
-        }
-        return "bottles";
-    }
-
-    private string Pronoun(int number)
-    {
-        if (number == 1)
-        {
-            return "it";
-        }
-        return "one";
-    }
-
-    private string Quantity(int number)
-    {
-        if (number == 0)
-        {
-            return "no more";
-        }
-        return number.ToString();
-    }
-
-    private string Action(int number)
-    {
-        if (number == 0)
-        {
-            return "Go to the store and buy some more, ";
-        }
-        return $"Take {Pronoun(number)} down and pass it around, ";
-    }
-
-    private int Successor(int number)
-    {
-        if (number == 0)
-        {
-            return 99;
-        }
-        return number-1;
-    }
     
+    public string Container(int number)
+    {
+        return new BottleNumber(number).Container();
+    }
+
+    public string Pronoun(int number)
+    {
+        return new BottleNumber(number).Pronoun();
+    }
+
+    public string Quantity(int number)
+    {
+        return new BottleNumber(number).Quantity();
+    }
+
+    public string Action(int number)
+    {
+        return new BottleNumber(number).Action();
+    }
+
+    public int Successor(int number)
+    {
+        return new BottleNumber(number).Successor();
+    }
 }
